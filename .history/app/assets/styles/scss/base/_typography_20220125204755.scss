@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: 300 18px / 175% $text-font-stack;
+}
+.big{
+  font-size: $l3;
+  margin-bottom: $sp4;
+}
+

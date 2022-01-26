@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &--landing {
+  background-image: url("Images/banner-bg_1920x2880.jpg");
+  background-size: 100vh;
+  background-position: 60% 40%;
+  //🔧 Do you need this h1? Visually hide it for screen readers?
+  //    Is that redundant with Alt-text?
+  h1 {
+    display: none;
+  }
+  }
+
+  &:not(.header--landing) {
+    padding: 0 2rem 0 1rem;
+  }
+
+  &__title {
+    display: inline-block;
+    font-family: 'Young Heart';
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 1;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    letter-spacing: 2px;
+  }
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    background-color: #f6e9f2bd;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &__text {
+    padding: 0 1rem;
+    margin: 0 auto;
+    font-size: 125%;
+  }
+
+  a:not([cl]) {
+    color: inherit;
+  }
+}

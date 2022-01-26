@@ -1,0 +1,15 @@
+.content {
+  &--3-1 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: column;
+  }
+
+  &__image {
+    max-height: 200px;
+    overflow: ;
+    img {
+      aspect-ratio: 1 / 1;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.button {
+  font-family: 'Euphoria Script';
+  font-size: 40px;
+  color: white;
+  &--link {
+    @extend .button;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

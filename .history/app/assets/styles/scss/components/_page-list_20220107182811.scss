@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+.page-list {
+
+  &__link {
+    font-size: 1.3rem;
+    border: 2px solid $pink;
+    border-radius: 1px;
+    padding: 1em 0;
+    a {
+      color: $pink;
+      font-weight: 400;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+  }
+}

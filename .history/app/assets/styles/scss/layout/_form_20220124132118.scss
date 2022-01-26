@@ -1,0 +1,61 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 40em;
+
+  &__section {
+    justify-content: space-between;
+    position: relative;
+    display: grid;
+    grid-template-areas: "label required"
+                         "input    input"
+                         "help      help";
+  }
+
+  &__label {
+    grid-area: label;
+    margin: 0;
+    display: inline;
+  }
+
+  &__label--required {
+
+    &::after {
+      content: "*";
+      display: inline;
+      margin-left: 2px;
+    }
+}
+
+textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 5px;
+  padding-top: 7px;
+
+  @include atSmall {
+  }
+}
+
+&__input {
+grid-area: input;
+width: 100%;
+padding: 5px;
+padding-bottom: 3px;
+}
+
+&__option {
+grid-area: input;
+flex: 100%;
+}
+
+&__radio-option {
+margin-left: 1rem;
+
+input {
+  border: 2px solid $darker-blue;
+  margin-right: 5px;
+}
+}
+}

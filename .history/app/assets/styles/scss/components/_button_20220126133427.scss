@@ -1,0 +1,118 @@
+@use '../abstracts' as *;
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.button {
+  padding: $sp2 $sp4;
+  margin: $sp5 0 0;
+
+  &-link {
+    @extend .button;
+    display: inline-block;
+
+    @include hocus {
+      text-decoration: none;
+    }
+  }
+
+  &-link--outline {
+    background-color: #ffffff00;
+    border: 2px solid $pink;
+    color: $pink;
+    font-weight: 300;
+
+    @include hocus {
+      background-color: #{$pink};
+      color: #fff;
+      font-weight: 200;
+    }
+  }
+
+  &-link--cta {
+    background-color: $pink;
+    font-family: 'Euphoria Script';
+    font-size: $l4;
+    color: white;
+    transition: all 300ms ease-in-out; 
+    position: relative;
+    overflow: hidden;
+    
+  
+
+    span {
+      display: inline-block;
+      margin-top: $sp0;
+      z-index: 2;
+      position: relative;
+    }
+
+    @include hocus {
+
+     background-color: #f396aa;
+     box-shadow: 3px 3px 6px 0 #{$box-shadow--darker}4d;
+     transform: translate(-2px, -2px);
+
+    }
+  }
+}
+
+.button_spots{
+  opacity:1;
+  @for $i from 0 through 60{
+      &:nth-of-type(#{$i}){
+          top:(16px - random(10)) - 0 !important;
+          left:-34px  !important;
+          opacity:0;
+          padding:random(20)/4 + 2 + px !important;
+          animation:spew 1s .3s forwards,rotate 4s + random(4)/10 .25s + random(12)/10 linear infinite ,final .2s 4s forwards,spot-#{$i} .7s .4/random(10) + random(10)/10 + 10s linear infinite !important;
+      }
+  }
+}
+
+//.button
+.b_l_quad .button_spots{
+  @for $i from 1 through 20{
+      &:nth-child(#{$i}){
+          padding:random(3) + 2 + px;
+          left: -25 + ($i * 12) + px;
+          top: 50 + px;
+      }
+  }
+  @for $i from 20 through 40{
+      &:nth-child(#{$i}){
+          padding:random(3) + 2 + px;
+          left: -255 + ($i * 12) + px;
+          top: -12 + px;
+      }
+  }
+  @for $i from 40 through 46{
+      &:nth-child(#{$i}){
+          padding:random(3) + 2 + px;
+          left: 204px;
+          top: -488 + ($i * 12) + px;
+      }
+  }
+
+  @for $i from 46 through 52{
+      &:nth-child(#{$i}){
+          padding:random(3) + 2 + px;
+          left: -10px;
+          top: -568 + ($i * 12) + px;
+      }
+  }
+}
+.button_spots{
+  position:absolute;
+  border-radius:100px;
+  background:green;
+  opacity:0;
+  animation:opacity 1s;
+  @for $i from 1 through 52{
+      &:nth-of-type(#{$i}){
+          transform-origin:90px - random(10) 20px - random(10);
+          background:hsla(350 + random(399) ,57% - random(10) ,65%,1);
+          box-shadow:0px 0px 10px rgba(255,255,255,0.12);
+          transition:all 1s + random(10)/10;
+      }
+  }
+}

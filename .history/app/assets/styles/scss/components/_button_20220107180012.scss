@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.button {
+  font-family: ;
+  &--link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

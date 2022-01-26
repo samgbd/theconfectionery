@@ -1,0 +1,65 @@
+@use '../abstracts' as *;
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.button {
+  padding: $sp2 $sp4;
+  margin: $sp5 0 0;
+
+  &-link {
+    @extend .button;
+    display: inline-block;
+
+    @include hocus {
+      text-decoration: none;
+    }
+  }
+
+  &-link--outline {
+    background-color: #ffffff00;
+    border: 2px solid $pink;
+    color: $pink;
+    font-weight: 300;
+
+    @include hocus {
+      background-color: #{$pink};
+      color: #fff;
+      font-weight: 200;
+    }
+  }
+
+  &-link--cta {
+    background-color: $pink;
+    font-family: 'Euphoria Script';
+    font-size: $l4;
+    color: white;
+    transition: background-color 300ms ease-in-out; 
+    position: relative;
+
+    &:after {
+      content:'';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      background-color: $p300;
+      left:50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 1;
+      border-radius: 50%;
+      transition: transform 300ms ease-in;
+    }
+  
+
+    span {
+      display: inline-block;
+      margin-top: $sp0;
+      z-index: 2;
+      position: relative;
+    }
+
+    @include hocus {
+      
+    }
+  }
+}

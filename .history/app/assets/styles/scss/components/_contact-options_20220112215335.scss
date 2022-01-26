@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+.contact-options {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto;
+
+  &__option {
+    position: relative;
+
+    @include hocus {
+      [class*='outline'] {
+        opacity: 0;
+      }
+
+      [class*='filled'] {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__icon--filled{
+    position: absolute;
+    top:0;
+    left: 0;
+  }
+}

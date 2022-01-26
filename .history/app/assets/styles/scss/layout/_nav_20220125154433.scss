@@ -1,0 +1,7 @@
+.nav {
+  display: inline-flex;
+
+  &--v {
+    flex-direction: column;
+  }
+}

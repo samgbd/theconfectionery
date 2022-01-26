@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+.page-list {
+  color: $pink;
+
+  &__link {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+.image {
+  min-width: 100%;
+  background-size: cover;
+  overflow: hidden;
+
+  &--shanna {
+    height: 300px;
+    background-image: url("Images/Photo_930x1001.jpg");
+    max-width: 300px;
+    width:100%;
+    min-width: unset;
+
+    @include atMedium {
+      height: unset;
+    }
+  }
+  &--cookies {
+    background-image: url("Images/cookies_3024x4032.jpg");
+  }
+}

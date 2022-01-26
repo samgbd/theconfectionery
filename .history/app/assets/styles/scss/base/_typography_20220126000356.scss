@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: 300 18px / 1.75 $text-font-stack;
+}
+.big{
+  font-size: $l3;
+ // margin-bottom: $sp4;
+  color: $pink;
+  text-align: center;
+  display: block;
+  
+  @include atMedium {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.text {
+  &--big {
+    font-size: $l1;
+    margin-bottom: $sp4;
+  }
+}
+

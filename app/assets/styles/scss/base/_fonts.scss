@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@font-face {
+  font-family: 'Young Heart';
+  src: url('Fonts/youngheart/youngheart-webfont/fonts/YoungHeart-WX2O.eot');
+  src: url('Fonts/youngheart/youngheart-webfont/fonts/YoungHeart-WX2O.eot?#iefix') format('embedded-opentype'),
+       url('Fonts/youngheart/youngheart-webfont/fonts/YoungHeart-WX2O.woff2') format('woff2'),
+       url('Fonts/youngheart/youngheart-webfont/fonts/YoungHeart-WX2O.woff') format('woff'),
+       url('Fonts/youngheart/youngheart-webfont/fonts/YoungHeart-WX2O.ttf')  format('truetype'),
+       url('Fonts/youngheart/youngheart-webfont/fonts/YoungHeart-WX2O.svg#Young Heart') format('svg');
+}

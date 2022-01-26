@@ -1,0 +1,40 @@
+/*
+Theme Name: Confectionery
+Author: Samantha Donaldson
+Author URI: https://wordpress.org/
+Description: Built for theconfectioneryllc.com
+Requires at least: 5.9
+Tested up to: 5.9
+Requires PHP: 5.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: confectionery
+
+*/
+@charset 'UTF-8';
+
+@use 'shame'
+//Vendor
+@use 'vendors' as *;
+
+//Abstracts
+@use 'abstracts' as *;
+
+//Base Styles
+@use 'base' as *;
+
+//Components
+@use 'components' as *;
+
+//Pages
+@use 'pages' as *;
+
+//Themes
+@use 'themes' as *;
+
+//Layout
+@use 'layout' as *;
+
+//Shame
+@use 'shame' as *;

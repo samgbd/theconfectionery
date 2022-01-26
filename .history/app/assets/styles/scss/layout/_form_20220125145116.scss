@@ -1,0 +1,205 @@
+@use '../abstracts' as v;
+
+$required-indicator: v.$pink;
+$input-border: v.$input-border;
+$autofill-bg: v.$autofill-bg;
+
+
+.form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  input:focus,
+  textarea:focus {
+    outline:none;
+    border-color: #039995;
+    background-color: #fff;
+  }
+  
+  &__section:not(.form__section--radio):focus-within,
+  &__section--radio:focus-within .form__label,
+  &__section--radio:active .form__label {
+    font-weight: 500;
+  }
+
+  &__section {
+    flex:1;
+    margin: .5rem 0;
+    position: relative;
+    display: grid;
+    grid-template-areas: "label required"
+                         "help      help"
+                         "input    input";
+
+    &--full-width {
+      width: auto;
+      max-width: none;
+      box-sizing: border-box;
+    }
+  }
+
+  &__label {
+    grid-area: label;
+    margin: .5em 0 .25em;
+  }
+
+  &__label--required {
+    &::after {
+      content: "*";
+      color: $required-indicator;
+      text-decoration: underline;
+      text-decoration-color: $required-indicator;
+      text-decoration-style: dotted;
+      text-underline-position: auto;
+      display: inline;
+      margin-left: 3px;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    max-width: 20em;
+  }
+
+  input[type="date"] {
+    display: inline-block;
+    align-self: center;
+    width: fit-content;
+  }
+
+  input, textarea {
+    font-family: "Open Sans";
+    font-size: 1em;
+    border: 2px solid $input-border;
+    display: block;
+    flex: 100%;
+
+    &:autofill {
+      box-shadow: 2em 2em 0 0 inset $autofill-bg;
+    }
+  }
+  
+  textarea {
+    width: 100%;
+    height: 10em;
+    padding: 5px;
+    padding-top: 7px;
+  }
+
+  &__input {
+    grid-area: input;
+    width: 100%;
+    padding: 5px;
+    padding-bottom: 3px;
+  }
+
+  &__radio-group {
+    padding-top: 0;
+    display: inline-grid;
+    grid-template-columns: max-content;
+    grid-template-rows: minmax(1fr, 100%);
+
+    div {
+      grid-area: unset;
+    }
+  }
+
+  &__radio-option {
+    grid-area: input;
+
+    &:first-child {
+      label {
+        margin-top: .5rem;
+      }
+    }
+  }
+
+  &__radio-option {
+    margin-left: 1rem;
+  }
+
+  .radio {
+    position: absolute;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+  }
+
+  .radio-label {
+    display: inline-grid;
+    gap: 0 10px;
+    grid-template-areas: "indicator label";
+    grid-template-columns: 40px 3fr;
+    min-width: 65%;
+    margin: .5em .75rem;
+    padding: 0 10px;
+    border: 2px solid $option-border;
+    justify-content: center;
+    line-height: 1.2;
+    user-select: none;
+    cursor: pointer;
+    align-items: center;
+    position:relative;
+
+    span {
+      grid-area: label;
+      margin: 0 .5rem;
+    }
+
+    &:hover {
+      box-shadow: 5px 5px 5px 0 #{v.$p300}4d;
+      background-color: #ffffffaf;
+      filter: brightness(110%)
+    }
+
+    &::before {
+      content: ' ';
+      position: relative;
+      padding: .25rem 0;
+      place-self: center;
+      display: block;
+      background-repeat:  no-repeat;
+      background-position:  center center;
+      background-size: contain;
+      height: 30px;
+      width: 30px;
+      padding-left: .5rem;
+      overflow: visible;
+    }
+  }
+
+  .radio:checked {
+    + .radio-label {
+      background-color: $selected-bg;
+      border-color: transparent;
+      &::before {
+        background-image: url('https://api.iconify.design/bx/bx-check.svg?color=%23f7ded9&width=30&height=30');
+      }
+    }
+  }
+  
+  .radio:checked:active, 
+  .radio:focus {
+    + .radio-label {
+      box-shadow: 5px 5px 5px 0 #{v.$p300}4d;
+      filter: brightness(110%)
+    }
+  }
+
+  .help {
+    grid-area: help;
+    margin: 0
+  }
+
+  #callTimeSection {
+    display: none;
+  }
+}

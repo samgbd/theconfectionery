@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+  background-color: $p400;
+  color: $p100;
+  padding: 3rem;
+
+  &__contact-options {
+    img {
+      height: 34px;
+      width: 34px;
+    }
+  }
+
+  &__info {
+    margin-top: 4rem;
+  }
+}

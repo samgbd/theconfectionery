@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.contact-options {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto $sp7;
+  list-style-type: none;
+
+  &--vertical-list {
+    flex-direction: column;
+    img {
+      height: 34px;
+      width: 34px;
+    }
+  }
+  &__option {
+    position: relative;
+    display: flex;
+
+    @include hocus {
+      [class*='normal'] {
+        opacity: 0;
+      }
+
+      [class*='hover'] {
+        opacity: 1;
+      }
+    }
+  }
+  &__
+
+  &__icon--hover{
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 0;
+  }
+}

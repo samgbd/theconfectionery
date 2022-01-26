@@ -1,0 +1,6 @@
+class NavMenu {
+  constructor () {
+
+  }
+  
+}

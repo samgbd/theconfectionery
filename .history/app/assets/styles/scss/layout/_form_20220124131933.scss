@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 40em;
+
+  &__section {
+    justify-content: space-between;
+    position: relative;
+    display: grid;
+    grid-template-areas: "label required"
+                         "input    input"
+                         "help      help";
+  }
+
+  &__label {
+    grid-area: label;
+    margin: 0;
+    display: inline;
+  }
+
+  &__label--required {
+
+    &::after {
+      content: "*";
+      display: inline;
+      margin-left: 2px;
+    }
+}
+}

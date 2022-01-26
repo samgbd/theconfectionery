@@ -1,0 +1,13 @@
+.image {
+  height: 100%;
+  min-width: 100%;
+  background-size: cover;
+  overflow: hidden;
+  &--shanna {
+    background-image: url("Images/Photo_930x1001.jpg");
+    max-width: 300px;
+  }
+  &--cookies {
+    background-image: url("Images/cookies_3024x4032.jpg");
+  }
+}

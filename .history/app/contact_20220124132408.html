@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Confectionery | Contact</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    </head>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="header">
+      <h1 class="header__title">The Confectionery</h1>
+      <div class="hamburger">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </div>
+    </header>
+
+    <main>
+      <div class="page-title">
+        <p>Contact</p>
+      </div>
+    </main>
+
+    <form>
+      <div class="form__section">
+        <label for="name" class="form__label form__label--required" action="https://formsubmit.co/sgbourbon@gmail.com" method="POST">
+          Name
+        </label>
+        <input id="name" name="name" class="form__input" type="text" required>
+        <span class="form__required-indicator">*required</span>
+        <div class="form__help">
+        </div>
+        <div class="form__invalid-field">
+          <span class="material-icons">
+            error_outline
+          </span>
+        </div>
+      </div>
+      
+      <div class="form__section">
+        <label for="email" class="form__label form__label--required">Email</label>
+        <input id="email" name="email" class="form__input" type="email" required pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$">
+        <div class="form__help" id="email-help"  aria-live="polite">
+        </div>
+        <span class="form__required-indicator">*required</span>
+        <div class="form__invalid-field">
+          <span class="material-icons">
+            error_outline
+          </span>
+        </div>
+      </div>
+        
+      <div class="form__section">
+        <label for="phone" class="form__label">Phone number</label>
+        <input id="phone" name="phone" class="form__input" type="tel">
+        <div class="form__help">
+        </div>
+        <div class="form__invalid-field">
+          <span class="material-icons">
+            error_outline
+            </span>
+            </div>
+      </div>
+        
+      <div class="form__section form__section--full-width">
+        <p class="form__label">Please select your preferred contact method:</p>
+        <div class="form__input">
+        <div class="form__option">
+          <input class="radio" type="radio" name="contact" id="contactChoice1">
+          <label for="contactChoice1"><span class="radio-element"></span><span class="label-text">Email</span></label>
+        </div>
+
+        <div class="form__option">
+          <input class="radio" type="radio"  name="contact" id="contactChoice2">
+          <label for="contactChoice2"><span class="radio-element"><span class="radio-element-marker"></span></span><span class="label-text">Phone</span></label>
+        </div>
+
+        <div class="form__option">
+          <input class="radio" type="radio"  name="contact" id="contactChoice3" checked>
+          <label for="contactChoice3"><span class="radio-element"></span><span class="label-text">Either / No preference</span></label>
+        </div>
+      </div>
+      </div>
+
+      <div class="form__section form__section--full-width">
+        <label for="message" class="form__label form__label--required">Your message</label>
+        <textarea class="form__input" id="message" name="message" spellcheck="true"  required></textarea>
+        <span class="form__required-indicator">*required</span>
+        <div class="form__help">
+        </div>
+        <div class="form__invalid-field">
+          </div>
+      
+      </div>
+        
+      <button type="submit" class="btn btn--submit form__button"><span class="btn__text">Send Message</span></button>
+        
+
+    </form>
+    
+    <script src="bundled.js"></script>
+  </body>
+</html>

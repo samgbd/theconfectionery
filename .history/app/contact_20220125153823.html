@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Confectionery | Contact</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    </head>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="header">
+      <h1 class="header__title">The Confectionery</h1>
+      <div class="hamburger">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </div>
+    </header>
+
+    <main>
+      <div class="page-title">
+        <p>Contact</p>
+      </div>
+    </main>
+    <div>
+
+    </div>
+    <form class="form">
+      <div class="form__section">
+        <label class="form__label form__label--required" for="name">Name</label>
+        <input class="form__input" type="text" name="name" id="name" required>
+      </div>
+
+      <div class="form__section">
+        <label class="form__label form__label--required" for="email">Email</label>
+        <input class="form__input" type="email" name="email" id="email" required>
+      </div>
+
+      <div class="form__section">
+        <label class="form__label" for="phone">Phone Number</label>
+        <p class="help" id="phoneHelp"></p>
+        <input class="form__input" type="tel" name="phone" id="phone">
+      </div>
+
+      <div class="form__section form__section--radio form__section--full-width" id="contactPref">
+        <p class="form__label">What's the best method to reach you?</p>
+
+      <div class="form__input form__radio-group">
+        <div class="form__radio-option radio-group__option">
+          <input class="radio" type="radio" name="radioSelection" id="phoneOpt">
+          <label class="radio-label" for="phoneOpt"><span class="label-text">Phone</span></label>
+        </div>
+
+        <div class="form__radio-option  radio-group__option">
+          <input class="radio" type="radio"  name="radioSelection" id="emailOpt">
+          <label class="radio-label" for="emailOpt"><span class="label-text">Email</span></label>
+        </div>
+
+        <div class="form__radio-option  radio-group__option">
+          <input class="radio" type="radio"  name="radioSelection" id="eitherOpt" checked>
+          <label class="radio-label" for="eitherOpt"><span class="label-text">Either / No preference</span></label>
+        </div>
+      </div>
+      </div>
+      <div class="form__section" id="callTimeSection">
+        <input class="form__input" type="text"  name="phoneTime" id="phoneTime">
+        <label class="form_label" for="phoneTime"><span class="label__text">When is the best time to call?</span></label>
+      </div>
+      <div class="form__section">
+        <input class="form__input" type="date"  name="eventDate" id="eventDate">
+        <label class="form__label for="eventDate"><span class="label__text">Event date</span></label>
+      </div>
+  
+      <div class="form__section form__section--full-width">
+        <label for="message" class="form__label form__label--required">Your message</label>
+              <textarea class="form__input" id="message" name="message" spellcheck="true" required></textarea>
+      </div>
+      <button type="submit" class="button"><span class="btn__text">Send Message</span></button>
+    </form>
+
+    <footer class="footer">
+      <div class="footer__contact-options contact-options">
+        <div class="contact-options__option">
+          <img class="contact-options__icon--outline" src="assets/images/icons/facebook-outline-p100-50x50.png">
+        </div>
+        <div class="contact-options__option">
+          <img class="contact-options__icon--outline" src="assets/images/icons/instagram-outline-p100-50x50.png">
+        </div>
+        <div class="contact-options__option">
+          <img class="contact-options__icon--outline" src="assets/images/icons/email-outline-p100-50x50.png">
+        </div>
+        <div class="contact-options__option">
+          <img class="contact-options__icon--outline" src="assets/images/icons/phone-outline-p100-50x50.png">
+        </div>
+      </div>
+
+      <div class="footer__info">
+        <div class="footer__name">The Confectionery</div>
+        <nav class="nav footer__nav">
+          <a href="/">Menu</a>
+          <a href="/">Catering</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+        <a class="footer__phone-num" href="tel:">
+          (999) 999 - 9999
+        </a>
+        <a class="footer__email" href="mailto:shanna@theconfectionery.com">
+          shanna@theconfectionery.com</a>
+      </div>
+    </footer>
+    
+    <script src="bundled.js"></script>
+  </body>
+</html>

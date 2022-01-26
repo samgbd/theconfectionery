@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+  letter-spacing: 1px;
+  background-color: $p400;
+  color: $p100;
+  padding: $sp6 $sp4;
+  font-weight: 200;
+
+  &__contact-options {
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  &__info {
+    margin: $sp6 auto $sp6 $;
+    max-width: 700px;
+    
+  }
+
+  &__name {
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  &__nav {
+    gap: 1em;
+    margin-bottom: 4px;
+    display: inline-flex;
+    align-items: flex-start;
+
+    a {
+      color: inherit;
+      //text-decoration: underline;
+     // text-underline-offset: 4px;
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+      //padding: 0 $sp2;
+      //left: -$sp2;
+      //border-left: 2px solid transparent;
+
+     // @include expandingBorders($p100, 100%)
+
+     @include hocus {
+      border-left-color: $p100;
+      box-shadow: 
+      -6px 0 0 0 $p400,
+      -8px 0 0 0 $p100;
+     }
+    }
+  }
+
+  &__phone-num,
+  &__email {
+    display: block;
+   // margin-top: 1em;
+    color: inherit
+  }
+}

@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  background-image: url("Images/banner-bg_1920x2880.jpg");
+  background-size: 100vh;
+  background-position: 60% 40%;
+  //🔧 Do you need this h1? Visually hide it for screen readers?
+  //    Is that redundant with Alt-text?
+  h1 {
+    display: none;
+  }
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    background-color: #f6e9f2bd;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    justify-content: ;
+    //position: absolute;
+  }
+  &__text {
+    padding: 0 1rem;
+    margin: 0 auto;
+    font-size: 125%;
+  }
+}

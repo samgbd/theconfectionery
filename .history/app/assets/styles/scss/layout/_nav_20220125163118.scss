@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+.nav {
+  display: flex;
+
+  &--v {
+    flex-direction: column;
+  }
+}
+
+.header-nav {
+  justify-content: center;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    padding: .5em 1em;
+    margin: 2em auto;
+
+  }
+
+  &.is-active {
+
+  }
+}

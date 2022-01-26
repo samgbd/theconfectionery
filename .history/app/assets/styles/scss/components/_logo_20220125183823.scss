@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+.logo {
+  padding: $sp5 0;
+  img {
+    //TODO temporary width while setting up design
+    //max-width: 50%;
+    max-height: 45vh;
+    display: block;
+    margin: 0 auto;
+    //padding: 75px 0;
+  }
+}

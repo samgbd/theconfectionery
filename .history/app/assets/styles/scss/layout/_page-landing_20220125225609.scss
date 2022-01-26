@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+.page-landing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  background-image: url("Images/banner-bg_1920x2880.jpg");
+  background-size: 100vh;
+  background-position: 60% 40%;
+    min-height: 100vh;
+  margin-bottom: $sp7;
+
+  align-items: stretch;
+
+
+  //🔧 Do you need this h1? Visually hide it for screen readers?
+  //    Is that redundant with Alt-text?
+  h1 {
+    display: none;
+  }
+
+
+  &__content {
+    min-height: 100%;
+    width: 100%;
+    background-color: #f6e9f2bd;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+  @include atLarge {
+    display: grid;
+    
+  }
+  }
+  
+  &__logo {
+    position: relative;
+    left: -1em;
+  }
+  &__text {
+    padding: 0 $sp2;
+    margin: 0 auto;
+    font-size: $l3;
+    color: $pink;
+   // font-family: 'Euphoria Script';
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

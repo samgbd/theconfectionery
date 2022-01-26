@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 40em;
+
+  &__section {
+    justify-content: space-between;
+    position: relative;
+    display: grid;
+    grid-template-areas: "label required"
+                         "input    input"
+                         "help      help";
+  }
+}

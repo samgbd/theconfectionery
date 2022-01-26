@@ -1,0 +1,87 @@
+@use '../abstracts' as *;
+
+.page-landing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  background-image: url("Images/banner-bg_1920x2880.jpg");
+  background-size: 100vh;
+  background-position: 60% 40%;
+    min-height: 100vh;
+  margin-bottom: $sp7;
+
+  align-items: stretch;
+
+  @include atLarge {
+    min-height: unset;
+  }
+
+  //🔧 Do you need this h1? Visually hide it for screen readers?
+  //    Is that redundant with Alt-text?
+  h1 {
+    display: none;
+  }
+
+
+  &__content {
+    min-height: 100%;
+    width: 100%;
+    background-color: #f6e9f2bd;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+  @include atLarge {
+  //  min-height: unset;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: $sp6 0;
+  }
+  }
+  
+  &__logo {
+    position: relative;
+    left: -1em;
+
+    padding: $sp4 0 $sp6;
+    img {
+      //TODO temporary width while setting up design
+      max-height: 40vh;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @include atLarge{
+      padding: 0;
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+  &__text {
+    padding: 0 $sp2;
+    margin: 0 auto;
+    font-size: $l3;
+    color: $pink;
+    text-align: center;
+   // font-family: 'Euphoria Script';
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: $sp6;
+    line-height: ;
+
+    @include atLarge {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@use '../abstracts' as *;
+
+.nav {
+  display: flex;
+  font-size: $l1;
+
+  &--v {
+    flex-direction: column;
+  }
+}
+
+.header-nav {
+  justify-content: center;
+  height: 0;
+  overflow:hidden;
+  transition: height 300ms ease-in-out;
+
+  &:not(.header-nav--medium){
+  @include atMedium {
+    display: none;
+  }
+}
+
+  &__list {
+    height: fit-content;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: $sp1;
+    margin: 0;
+    padding: 1em 0 2em;
+    flex: 0;
+
+    @include atMedium {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: $sp2;
+      justify-content: space-evenly;
+      width: 100%;
+      flex:1;
+      padding: $sp1 $sp1;
+    }
+  }
+
+  &__link {
+    padding: $sp1 $sp2;
+    //margin: 2em auto;
+    display: block;
+    color: $p500;
+    //border: 2px solid $p400;
+    text-align: center;
+    width: 10em;
+    font-weight: 300;
+
+    @include atMedium {
+      width: auto;
+      padding: 0 $sp2;
+    }
+    
+    // &:hover {
+      @include hocus {
+      //background-color: $p400;
+      font-weight: 300;
+      border-color: transparent;
+      //color: $pink-white;
+      
+      border: 2px solid $p400;
+
+    }
+  }
+
+  &--medium {
+    height: auto;
+    width: auto;
+    padding: 0 $sp2;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: $sp2;
+    justify-content: space-around;
+    width: auto;
+    padding: $sp1 $sp1;
+    display: none;
+
+    .nav__list {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: $sp2;
+      justify-content: space-evenly;
+      width: 100%;
+      flex:0;
+      padding: $sp1 $sp1;
+    }
+
+    .header-nav__link {
+      border: 2px solid transparent;
+
+      @include hocus {
+        //background-color: $p400;
+        font-weight: 300;
+        border-color: transparent;
+        //color: $pink-white;
+        
+        border: 2px solid $p400;
+  
+      }
+    }
+    @include atMedium {
+      display: flex;
+    }
+  }
+
+  &.is-active {
+
+  }
+}

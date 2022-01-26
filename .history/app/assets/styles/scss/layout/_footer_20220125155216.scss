@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+  background-color: $p400;
+  color: $p100;
+  padding: 3rem;
+  font-weight: 200;
+
+  &__contact-options {
+    img {
+      height: 34px;
+      width: 34px;
+    }
+  }
+
+  &__info {
+    margin: 4rem auto;
+    max-width: 500px;
+  }
+
+  &__name {
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  &__nav {
+    gap: 1em;
+    margin-bottom: 4px;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      display: inline-block
+    }
+  }
+
+  &__phone-num,
+  &__email {
+    display: block;
+    margin-top: 1em;
+    color: inherit
+  }
+}

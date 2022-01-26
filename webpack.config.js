@@ -1,6 +1,10 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== "production";
 
+console.log(process.env.NODE_ENV)
 module.exports = {
+ 
   entry: './app/assets/scripts/App.js',
 
   
@@ -39,7 +43,7 @@ module.exports = {
       {
          test: /\.css$/,
          use: [
-          'style-loader',
+         'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -52,7 +56,7 @@ module.exports = {
         test: /\.s[ac]ss$/i,
          use: [
           // Creates `style` nodes from JS strings
-          'style-loader',
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
           {
             loader: 'css-loader',
@@ -73,4 +77,5 @@ module.exports = {
       },
     ],
   },
+  plugins: [].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
 }

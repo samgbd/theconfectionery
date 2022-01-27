@@ -79,21 +79,8 @@ module.exports = {
     ],
   },
   plugins: [devMode ? false: new MiniCssExtractPlugin(),
-            new HtmlWebpackPlugin({
-              template:'app/html/about.html',
-              filename: 'about.html'
-            }),
-            new HtmlWebpackPlugin({
-              template:'app/html/contact.html',
-              filename: 'contact.html'
-            }),
-            new HtmlWebpackPlugin({
-              template:'app/html/index.html',
+            devMode ? false : new HtmlWebpackPlugin({
+              template:'app/html/about.html'
               filename: 'index.html'
-            }),
-            new HtmlWebpackPlugin({
-              template:'app/html/catering.html',
-              filename: 'catering.html'
-            })
-          ].filter(Boolean)
+            })].filter(Boolean)
 }

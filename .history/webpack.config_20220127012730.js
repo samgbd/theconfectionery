@@ -88,12 +88,8 @@ module.exports = {
               filename: 'contact.html'
             }),
             new HtmlWebpackPlugin({
-              template:'app/html/index.html',
+              template:'app/html/about.html',
               filename: 'index.html'
-            }),
-            new HtmlWebpackPlugin({
-              template:'app/html/catering.html',
-              filename: 'catering.html'
             })
           ].filter(Boolean)
 }

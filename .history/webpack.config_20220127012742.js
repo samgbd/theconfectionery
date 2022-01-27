@@ -92,8 +92,8 @@ module.exports = {
               filename: 'index.html'
             }),
             new HtmlWebpackPlugin({
-              template:'app/html/catering.html',
-              filename: 'catering.html'
+              template:'app/html/about.html',
+              filename: 'index.html'
             })
           ].filter(Boolean)
 }

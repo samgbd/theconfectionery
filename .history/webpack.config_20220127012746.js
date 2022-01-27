@@ -93,7 +93,7 @@ module.exports = {
             }),
             new HtmlWebpackPlugin({
               template:'app/html/catering.html',
-              filename: 'catering.html'
+              filename: 'index.html'
             })
           ].filter(Boolean)
 }

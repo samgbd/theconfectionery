@@ -81,19 +81,15 @@ module.exports = {
   plugins: [devMode ? false: new MiniCssExtractPlugin(),
             new HtmlWebpackPlugin({
               template:'app/html/about.html',
-              filename: 'about.html'
-            }),
-            new HtmlWebpackPlugin({
-              template:'app/html/contact.html',
-              filename: 'contact.html'
-            }),
-            new HtmlWebpackPlugin({
-              template:'app/html/index.html',
               filename: 'index.html'
             }),
             new HtmlWebpackPlugin({
-              template:'app/html/catering.html',
-              filename: 'catering.html'
+              template:'app/html/contact.html',
+              filename: 'index.html'
+            }),
+            new HtmlWebpackPlugin({
+              template:'app/html/about.html',
+              filename: 'index.html'
             })
           ].filter(Boolean)
 }

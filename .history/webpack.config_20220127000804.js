@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const devMode = process.env.NODE_ENV !== "production";
 
 console.log(process.env.NODE_ENV)
@@ -78,6 +77,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [[].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
-           new HtmlWebpackPlugin()],
+  plugins: [].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
 }

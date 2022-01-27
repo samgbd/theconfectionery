@@ -78,6 +78,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [[].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
-           new HtmlWebpackPlugin()],
+  plugins: [].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
 }

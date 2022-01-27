@@ -21,7 +21,7 @@ module.exports = {
 
   },
   devServer: {
-      static: './app',
+      static: '.',
       // {
       //   directory: path.join(__dirname, 'app')
       // },
@@ -33,8 +33,8 @@ module.exports = {
   module: {
     rules: [
       {
-        // test: /\.(png|jpg|gif|svg|ico)$/i,
-        // type: 'asset/resource'
+        test: /\.(png|jpg|gif|svg|ico)$/i,
+        type: 'asset/resource'
         // loader: 'url-loader',
         // options:{
         //     outputPath: './app/assets/images/',
@@ -78,6 +78,6 @@ module.exports = {
       },
     ],
   },
-  plugins: [devMode ? false: new MiniCssExtractPlugin(),
-            devMode ? false : new HtmlWebpackPlugin()].filter(Boolean)
+  plugins: [devMode ? false: new MiniCssExtractPlugin() : false,
+           new HtmlWebpackPlugin()].filter(Boolean)
 }

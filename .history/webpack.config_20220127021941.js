@@ -78,7 +78,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [devMode ? false: new MiniCssExtractPlugin()
+  plugins: [devMode ? false: new MiniCssExtractPlugin(),
             // new HtmlWebpackPlugin({
             //   template:'app/html/about.html',
             //   filename: 'about.html'

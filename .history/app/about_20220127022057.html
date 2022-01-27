@@ -10,16 +10,17 @@
     <title>The Confectionery | Contact</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
-</head>
+<link href="main.css" rel="stylesheet"></head>
   <body>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <!--#include file="include_head.html" -->
     <header class="header">
       <h1 class="header__title"><a href="/">The Confectionery</a></h1>
       <div class="hamburger" id="hamburger">
@@ -35,83 +36,50 @@
           <li><a class="header-nav__link current-page" href="/contact.html">Contact</a></li>
         </ul>
       </nav>
-    </header>    <nav class="nav header-nav" id="navMenu">
+    </header>
+    <nav class="nav header-nav" id="navMenu">
       <ul class="header-nav__list" id="navList">
         <li><a class="header-nav__link" href="/">Home</a></li>
-        <li><a class="header-nav__link" href="/">About</a></li>
-        <li><a class="header-nav__link" href="/">Catering</a></li>
+        <li><a class="header-nav__link" href="/about.html">About</a></li>
+        <li><a class="header-nav__link" href="/catering.html">Catering</a></li>
         <li><a class="header-nav__link current-page" href="/contact.html">Contact</a></li>
       </ul>
     </nav>
     <div class="page-title">
-      <p>Catering</p>
+      <p>About</p>
     </div>
 
     <main class="wide-gap">
-      <form class="form">
-      <div class="form__section">
-        <label class="form__label form__label--required" for="name">Name</label>
-        <input class="form__input" type="text" name="name" id="name" required>
-      </div>
 
-      <div class="form__section">
-        <label class="form__label form__label--required" for="email">Email</label>
-        <input class="form__input" type="email" name="email" id="email" required>
-      </div>
-
-      <div class="form__section">
-        <label class="form__label" for="phone">Phone Number</label>
-        <p class="help" id="phoneHelp"></p>
-        <input class="form__input" type="tel" name="phone" id="phone">
-      </div>
-
-      <div class="form__section form__section--radio form__section--full-width" id="contactPref">
-        <p class="form__label">What's the best method to reach you?</p>
-
-      <div class="form__input form__radio-group">
-        <div class="form__radio-option radio-group__option">
-          <input class="radio" type="radio" name="radioSelection" id="phoneOpt">
-          <label class="radio-label" for="phoneOpt"><span class="label-text">Phone</span></label>
+      <div class="content content--2-1">
+        <div class="content__left content__text text-content">
+          <span class="big">Hi, I'm Shanna!</span>
+          <p>
+            The Confectionery was born not only from my love of all things sweet, but also from my love of sharing the joy I feel when I bake.
+          </p>
+          <p>I like to play with flavors and continuously try new recipes, to which my husband and children play the role my Guinee pigs. I have yet to hear a complaint about that. </p> 
+          <p>My focus is to take dessert up a notch. Elegant flavors in whimsical treats, made with a ton of love and happiness.</p>
         </div>
-
-        <div class="form__radio-option  radio-group__option">
-          <input class="radio" type="radio"  name="radioSelection" id="emailOpt">
-          <label class="radio-label" for="emailOpt"><span class="label-text">Email</span></label>
-        </div>
-
-        <div class="form__radio-option  radio-group__option">
-          <input class="radio" type="radio"  name="radioSelection" id="eitherOpt" checked>
-          <label class="radio-label" for="eitherOpt"><span class="label-text">Either / No preference</span></label>
+        <div class="content__right content__image">
+          <div class="image image--shanna"></div>
         </div>
       </div>
-      </div>
-      <div class="form__section" id="callTimeSection">
-        <input class="form__input" type="text"  name="phoneTime" id="phoneTime">
-        <label class="form_label" for="phoneTime"><span class="label__text">When is the best time to call?</span></label>
-      </div>
-      <div class="form__section">
-        <input class="form__input" type="date"  name="eventDate" id="eventDate">
-        <label class="form__label" for="eventDate"><span class="label__text">Event date</span></label>
-      </div>
-
-      <div class="form__section" id="eventTypeSection">
-        <input class="form__input" type="text"  name="eventType" id="eventType">
-        <label class="form_label" for="eventType"><span class="label__text">What type of event is it?</span></label>
-      </div>
-
-      <div class="form__section" id="eventSizeSection">
-        <input class="form__input" type="text"  name="eventSize" id="eventSize">
-        <label class="form_label" for="eventSize"><span class="label__text">How many guests will be attending?</span></label>
+      <div class="content content--1-2">
+        <div class="content__left content__image">
+          <div class="image image--cookies"></div>
+        </div>
+        <div class="content__right content__text text-content">
+        <p>I had originally planned on starting this business a couple years down the road, when my youngest son goes off to middle school. However, the universe had another plan.</p>
+        <p>A friend of a friend was getting married and wanted a desert table. My lovely friend mentioned that I bake. The soon-to-be bride and groom took a chance on me, having never tasted my offerings. It was a beautiful success and not only did the event bump up my start date, but I also gained two lovely additions to my circle of friends. 
+        </p>
+        <p>
+          Thank you for taking the time to read my story. You can find photos of my treats on the (content page, shop…?) as well as find the contact form for catering inquiries. I look forward to sharing my sweet tooth with you!
+        </p>
+        </div>
       </div>
 
-      <div class="form__section form__section--full-width">
-        <label for="message" class="form__label form__label--required">Your message</label>
-              <textarea class="form__input" id="message" name="message" spellcheck="true" required></textarea>
       </div>
-      <button type="submit" class="button"><span class="btn__text">Send Message</span></button>
-    </form>
     </main>
-
     <footer class="footer">
       <div class="footer__contact-options contact-options contact-options__option--hover-effect">
         <a href="https://www.facebook.com/TheConfectioneryLLC"  class="contact-options__option">
@@ -148,7 +116,7 @@
       </nav>
     </div>
   </footer>
-
-    <script src="bundled.js"></script>
+    
+    <script src=".././bundled.js"></script>
   </body>
 </html>

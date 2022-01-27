@@ -10,15 +10,14 @@ class NavMenu {
 
   testing () {
     console.log("hi")
-    console.log(this.hamburger)
+    console.log(this.navHeight)
   }
 
   events(){
-    this.hamburger.addEventListener('click', () => this.toggleMenu());
+    this.hamburger.addEventListener('click', () => this.toggleMenu);
   }
 
   toggleMenu () {
-    console.log(this.hamburger)
     let navHeight = this.getHeight();
     if (this.checkIfOpen()) {
       this.hamburger.classList.remove('is-active')

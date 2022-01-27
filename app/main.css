@@ -533,7 +533,7 @@ a.text-link:before {
   width: calc(100% + 4px);
   position: absolute;
   background-color: #93DCCB;
-  background-color: #0d2e2b;
+  background-color: #a1dfd9;
   z-index: -1;
   bottom: 0;
   left: -2px;
@@ -824,7 +824,6 @@ p {
 .hamburger {
   display: inline-block;
   padding: 8px;
-  /* ONE */
 }
 @media only screen and (min-width: 768px) {
   .hamburger {
@@ -953,7 +952,6 @@ Files inside this folder can contain specific element styles and themes.
   letter-spacing: 2px;
   position: relative;
   top: 2px;
-  color: #682637;
 }
 .header__content {
   min-height: 100%;

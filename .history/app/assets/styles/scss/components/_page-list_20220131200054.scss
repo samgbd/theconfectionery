@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.page-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 $sp6;
+  gap: $sp3;
+  position: r;
+
+  &__link {
+    font-size: $l1;
+    padding: $sp2 0;
+    max-width: 80%;
+    width: 400px;
+    text-align: center;
+  }
+
+
+.page_item {
+  padding: $sp2 $sp4;
+  margin: $sp2 0 0;
+  display: inline-block;
+  background-color: #ffffff00;
+  border: 2px solid $pink;
+  color: $pink;
+  font-weight: 300;
+  max-width: 80%;
+  width: 400px;
+  text-align: center;
+
+  @include hocus {
+    text-decoration: none;
+    background-color: #{$pink};
+    color: #fff;
+    font-weight: 200;
+  }
+
+  a {
+    font-size: $l1;
+    padding: $sp2 0;
+    text-align: center;
+    margin: $sp2 0;
+  }
+}
+}

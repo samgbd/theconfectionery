@@ -1,0 +1,105 @@
+@use '../abstracts' as *;
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+  font-size: $t;
+}
+
+body {
+  background-color: $pink-white;
+  overflow-x: hidden;
+
+}
+
+main {
+  margin: 0 $sp1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: $sp7;
+  gap: $content-gap;
+
+  @include atMedium {
+    margin: 0 $sp3 $sp8;
+  }
+}
+
+.wide-gap{
+
+  @include atMedium {
+    gap: $sp5;
+  }
+  }
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.text-link {
+  position: relative;
+  font-weight: 400;
+  
+  &:before {
+    content: '';
+    height: $sp1;
+    width: calc(100% + 4px);
+    position: absolute;
+    background-color: #93DCCB;
+    background-color: #bfe4d7;
+    z-index:-1;
+    bottom: 0;
+    left: -2px;
+  }
+
+    @include hocus{
+      &:before {
+        height: 1.3em;
+      }
+  }
+}
+
+p {
+  margin-left: $sp1;
+  margin-right: $sp1;
+  margin-bottom: 0;
+  max-width: 55ch;
+}
+
+.text-content {
+  &--center {
+    text-align: center;
+  }
+}
+
+.nb {
+  white-space: nowrap;
+}
+
+.accent {
+  height: 400px;
+  opacity: .3;
+  position: absolute;
+  right: -10%;
+}

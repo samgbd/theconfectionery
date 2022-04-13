@@ -10,3 +10,5 @@ client images
 /*.css.map
 /theme.json
 /*.txt
+.vscode
+.history

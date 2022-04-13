@@ -470,6 +470,11 @@ template {
 /*
 This file is used to contain all vendor uses.
 */
+@media (min-width: 782px) {
+  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column:not(:first-child) {
+    margin-left: 0;
+  }
+}
 /**
  * Set up a decent box model on the root element
  */
@@ -479,7 +484,8 @@ html {
 }
 
 body {
-  background-color: #FFF7F0;
+  background-color: #fdecf0;
+  overflow-x: hidden;
 }
 
 main {
@@ -490,6 +496,7 @@ main {
   align-items: center;
   margin-bottom: 160px;
   gap: 48px;
+  position: relative;
 }
 @media only screen and (min-width: 768px) {
   main {
@@ -533,7 +540,7 @@ a.text-link:before {
   width: calc(100% + 4px);
   position: absolute;
   background-color: #93DCCB;
-  background-color: #a1dfd9;
+  background-color: #bfe4d7;
   z-index: -1;
   bottom: 0;
   left: -2px;
@@ -555,6 +562,15 @@ p {
 
 .nb {
   white-space: nowrap;
+}
+
+.accent {
+  height: 400px;
+  opacity: 0.15;
+  position: absolute;
+  right: -10%;
+  bottom: -300px;
+  z-index: 0;
 }
 
 /**
@@ -627,6 +643,7 @@ p {
 body {
   color: #222222;
   font: 300 18px/1.75 "Poppins", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Roboto Condensed";
 }
 
 .big {
@@ -645,7 +662,7 @@ body {
 
 .text--big {
   font-size: 1.25rem;
-  margin-bottom: 48px;
+  margin-bottom: 16px;
 }
 .text--big p {
   margin-left: 0;
@@ -710,14 +727,17 @@ p {
   flex-direction: column;
   align-items: center;
   margin: 0 0 96px;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
 }
 .page-list__link {
-  font-size: 1.25rem;
+  font-size: 1.953rem;
   padding: 16px 0;
   max-width: 80%;
   width: 400px;
   text-align: center;
-  margin: 16px 0;
+  font-family: "Young Heart";
 }
 .page-list .page_item {
   padding: 16px 48px;
@@ -975,7 +995,7 @@ Files inside this folder can contain specific element styles and themes.
   align-items: center;
   width: 100%;
   background-image: url(4896d26c9bae43ae27bd.jpg);
-  background-size: 100vh;
+  background-size: 100vw;
   background-position: 60% 40%;
   min-height: 100vh;
   margin-bottom: 160px;
@@ -1029,6 +1049,7 @@ Files inside this folder can contain specific element styles and themes.
   padding: 0 16px;
   margin: 0 auto;
   font-size: 1.953rem;
+  letter-spacing: normal;
   color: #CE5572;
   text-align: center;
 }
@@ -1147,7 +1168,7 @@ Files inside this folder can contain specific element styles and themes.
 .footer {
   letter-spacing: 1px;
   background-color: #9F5A6C;
-  color: #F7DED9;
+  color: #f7d9e2;
   padding: 96px 48px;
   font-weight: 200;
 }
@@ -1175,11 +1196,21 @@ Files inside this folder can contain specific element styles and themes.
   display: inline-block;
   position: relative;
   z-index: 2;
-  padding-left: 16px;
-  border-left: 2px solid transparent;
+  padding: 0;
+}
+@media only screen and (min-width: 768px) {
+  .footer__nav a {
+    border-left: 2px solid transparent;
+    padding-left: 16px;
+  }
+  .footer__nav a:hover, .footer__nav a:focus {
+    border-left-color: #f7d9e2;
+    box-shadow: none;
+  }
 }
 .footer__nav a:hover, .footer__nav a:focus {
-  border-left-color: #F7DED9;
+  border-left-color: transparent;
+  box-shadow: -6px 0 0 0 #9F5A6C, -8px 0 0 0 #f7d9e2;
 }
 .footer__phone-num, .footer__email {
   display: block;
